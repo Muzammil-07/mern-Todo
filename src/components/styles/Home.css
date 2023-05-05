@@ -1,0 +1,31 @@
+.container1{
+    
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "leftBar main rightBar";
+}
+.leftBar{
+ grid-area: leftBar;
+    height: 100vh;
+}
+.main{
+  grid-area: main;
+}
+.rightBar{
+    grid-area: rightBar;
+    
+}
+@media screen  and (max-Width:500px) {
+    .container1{
+        grid-template-columns: 1fr
+    }
+    .leftBar{
+        display: none;
+    }.rightBar{
+        display: none;
+    }
+    .main{
+        width: 100vw;
+    }
+}
